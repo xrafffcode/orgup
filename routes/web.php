@@ -2,20 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::group(['prefix' => 'admin'], function () {
-
+Route::group(['as' => 'app.'], function () {
     Route::get('/', function () {
-        return redirect()->route('dashboard');
-    });
-
-    Route::get('/dashboard', function () {
-        return "Dashboard";
-    })->name('dashboard');
+        return view('welcome');
+    })->name('landing');
 });
 
 require __DIR__ . '/admin.php';

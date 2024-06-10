@@ -78,6 +78,17 @@ class User extends Authenticatable
     }
 
     /**
+     * Get the otp that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     *
+     * */
+    public function otp()
+    {
+        return $this->hasOne(Otp::class);
+    }
+
+    /**
      * Get the profile by the user role
      *
      */

@@ -1,13 +1,36 @@
-<x-layouts.auth title="Masuk">
-    <form method="POST" action="{{ route('login') }}" class="login-form">
+<x-layouts.auth title="Daftar">
+    <form method="POST" action="{{ route('register') }}" class="login-form">
         @csrf
         <div class="login-top">
             <img src="{{ asset('app/images/orgup.png') }}" alt="logo" class="logo" width="100">
             <h3>
-                Masuk
+                Daftar
             </h3>
-            <p>Belum punya akun? <a href="{{ route('register') }}">Daftar</a></p>
+            <p>Sudah punya akun? <a href="{{ route('login') }}">Masuk</a></p>
         </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
+                placeholder="Nama Lengkap" name="name" value="{{ old('name') }}">
+            @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username"
+                placeholder="Username" name="username" value="{{ old('username') }}">
+
+            @error('username')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
         <div class="mb-3">
             <label>Email</label>
             <input placeholder="Email" type="email" id="email" name="email"
@@ -31,7 +54,7 @@
         </div>
 
         <button type="submit" id="button" name="submit">
-            Masuk
+            Daftar
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-arrow-right">

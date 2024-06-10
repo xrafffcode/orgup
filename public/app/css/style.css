@@ -11366,11 +11366,12 @@ body.event-page .react-upcoming__event .event__card .event_time {
 .react-login-page {
   background: url(../images/login/1.jpg) no-repeat center top;
   background-size: cover;
-  height: 100vh;
+min-height: 100vh;
 }
 .react-login-page.react-signup-page {
   background: url(../images/login/1.jpg) no-repeat center top;
   background-size: cover;
+  min-height: 100vh;
 }
 .react-login-page .login-left-content h1 {
   font-size: 50px;
