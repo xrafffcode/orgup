@@ -24,6 +24,9 @@
                                 <a href="{{ route('app.landing') }}">Home</a>
                             </li>
                             <li>
+                                <a href="{{ route('app.course.index') }}">Kelas</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('app.instructor.index') }}">Instruktur</a>
                             </li>
                             <li>
@@ -77,7 +80,7 @@
                                             <circle cx="12" cy="7" r="4"></circle>
                                         </svg>Masuk</a>
 
-                                    <a href="{{ route('login') }}" style="margin-left: 20px;">
+                                    <a href="{{ route('register') }}" style="margin-left: 20px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"

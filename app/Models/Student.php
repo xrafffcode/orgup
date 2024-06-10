@@ -31,6 +31,25 @@ class Student extends Model
     }
 
     /**
+     * Get the enrollments for the student.
+     *
+     */
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+    public function isEnrolled($id)
+    {
+        return $this->enrollments()->where('course_id', $id)->exists();
+    }
+
+    public function isEnrolledInAnyCourse()
+    {
+        return $this->enrollments()->exists();
+    }
+
+    /**
      * Get the avatar attribute.
      *
      * @param  string  $value

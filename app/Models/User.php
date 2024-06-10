@@ -88,6 +88,9 @@ class User extends Authenticatable
         return $this->hasOne(Otp::class);
     }
 
+
+
+
     /**
      * Get the profile by the user role
      *
