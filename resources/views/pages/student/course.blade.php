@@ -7,8 +7,7 @@
                 <div class="card">
                     <div class="card-body">
                         <img src="{{ asset($enrollment->thumbnail) }}" class="card-img-top" alt="{{ $enrollment->title }}">
-                        <h5 class="card-title">{{ $enrollment->title }}</h5>
-                        <p class="card-text">{!! $enrollment->description !!}</p>
+                        <p class="card-title mt-3">{{ $enrollment->title }}</p>
                         <a href="{{ route('app.course.play', $enrollment->slug) }}" class="btn btn-primary w-100">
                             Mulai
                         </a>
