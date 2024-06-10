@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\ArticleController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\InstructorController;
+use App\Http\Controllers\Student\DashboardController;
 use App\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +24,18 @@ Route::group(['as' => 'app.'], function () {
         Route::get('/', [InstructorController::class, 'index'])->name('index');
     });
 
+    Route::prefix('artikel')->name('article.')->group(function () {
+        Route::get('/', [ArticleController::class, 'index'])->name('index');
+        Route::get('/{slug}', [ArticleController::class, 'show'])->name('show');
+    });
+
     Route::get('/tentang-kami', [AboutController::class, 'index'])->name('about');
+});
+
+Route::prefix('student')->name('student.')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/kelas', [DashboardController::class, 'course'])->name('course');
 });
 
 require __DIR__ . '/admin.php';

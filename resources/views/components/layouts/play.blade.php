@@ -47,7 +47,7 @@
         </button>
         <div class="collapse navbar-collapse ms-0 ms-lg-5" id="navbarNavAltMarkup">
             <div class="navbar-nav mt-3 mt-lg-0">
-                <a href="" class="nav-link">
+                <a href="{{ route('student.dashboard') }}" class="nav-link">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.57 5.92993L3.5 11.9999L9.57 18.0699M20.5 11.9999H3.67" stroke="currentColor"

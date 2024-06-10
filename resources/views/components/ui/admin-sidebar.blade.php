@@ -29,6 +29,15 @@
                 </li>
             @endcan
 
+            @can('article-list')
+                <li class="nav-item {{ request()->is('admin/article*') ? ' active' : '' }}">
+                    <a href="{{ route('admin.article.index') }}" class="nav-link">
+                        <i class="link-icon" data-feather="file-text"></i>
+                        <span class="link-title">Artikel</span>
+                    </a>
+                </li>
+            @endcan
+
             @can('account-management')
                 <li
                     class="nav-item {{ request()->is('admin/permission*', 'admin/role*', 'admin/instructor*', 'admin/student*') ? ' active' : '' }}">

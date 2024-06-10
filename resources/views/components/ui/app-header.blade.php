@@ -30,6 +30,9 @@
                                 <a href="{{ route('app.instructor.index') }}">Instruktur</a>
                             </li>
                             <li>
+                                <a href="{{ route('app.article.index') }}">Artikel</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('app.about') }}">Tentang OrgUp</a>
                             </li>
                         </ul>
@@ -37,7 +40,7 @@
                             @auth
                                 <div class="react-login">
                                     @role('student')
-                                        <a href="">
+                                        <a href="{{ route('student.dashboard') }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
@@ -58,7 +61,8 @@
 
                                     <a style="margin-left: 20px;" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
                                             @csrf
                                         </form>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

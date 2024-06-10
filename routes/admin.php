@@ -18,4 +18,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
     Route::resource('/student', StudentController::class);
 
     Route::resource('/course', CourseController::class);
+
+    Route::resource('/article', \App\Http\Controllers\Admin\ArticleController::class);
 });
