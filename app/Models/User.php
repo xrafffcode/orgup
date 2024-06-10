@@ -96,6 +96,10 @@ class User extends Authenticatable
     {
         if ($this->hasRole('admin')) {
             return $this->admin()->first();
+        } elseif ($this->hasRole('instructor')) {
+            return $this->instructor()->first();
+        } elseif ($this->hasRole('student')) {
+            return $this->student()->first();
         }
     }
 }

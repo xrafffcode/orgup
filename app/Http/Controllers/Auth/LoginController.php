@@ -30,9 +30,11 @@ class LoginController extends Controller
         $data = $request->validated();
 
         if (Auth::attempt($data)) {
-            if (Auth::user()->hasRole('admin')) {
-                return redirect()->route('admin.dashboard');
+            if (Auth::user()->hasRole('student')) {
+                return redirect()->route('app.landing');
             }
+
+            return redirect()->route('admin.dashboard');
         }
 
         return back()->withErrors([
