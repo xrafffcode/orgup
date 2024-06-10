@@ -21,16 +21,25 @@
             @endcan
 
             @can('account-management')
-                <li class="nav-item {{ request()->is('admin/permission*', 'admin/role*') ? ' active' : '' }}">
+                <li
+                    class="nav-item {{ request()->is('admin/permission*', 'admin/role*', 'admin/instructor*') ? ' active' : '' }}">
                     <a class="nav-link" data-bs-toggle="collapse" href="#account-management" role="button"
-                        aria-expanded="{{ request()->is('admin/permission*', 'admin/role*') ? 'true' : 'false' }}">
+                        aria-expanded="{{ request()->is('admin/permission*', 'admin/role*', 'admin/instructor*') ? 'true' : 'false' }}">
                         <i class="link-icon" data-feather="users"></i>
                         <span class="link-title">Manajemen Akun</span>
                         <i class="link-arrow" data-feather="chevron-down"></i>
                     </a>
-                    <div class="collapse {{ request()->is('admin/permission*', 'admin/role*') ? 'show' : '' }}"
+                    <div class="collapse {{ request()->is('admin/permission*', 'admin/role*', 'admin/instructor*') ? 'show' : '' }}"
                         id="account-management">
                         <ul class="nav sub-menu">
+                            @can('instructor-list')
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.instructor.index') }}"
+                                        class="nav-link {{ request()->is('admin/instructor*') ? ' active' : '' }}">
+                                        Instruktur
+                                    </a>
+                                </li>
+                            @endcan
                             @can('permission-list')
                                 <li class="nav-item">
                                     <a href="{{ route('admin.permission.index') }}"

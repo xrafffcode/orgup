@@ -57,6 +57,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Get the instructor that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function instructor()
+    {
+        return $this->hasOne(Instructor::class);
+    }
+
+    /**
      * Get the profile by the user role
      *
      */
