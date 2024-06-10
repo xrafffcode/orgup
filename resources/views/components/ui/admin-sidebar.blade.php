@@ -39,14 +39,14 @@
                                     </a>
                                 </li>
                             @endcan
-                            {{-- @can('role-list')
+                            @can('role-list')
                                 <li class="nav-item">
                                     <a href="{{ route('admin.role.index') }}"
                                         class="nav-link {{ request()->is('admin/role*') ? ' active' : '' }}">
                                         Role
                                     </a>
                                 </li>
-                            @endcan --}}
+                            @endcan
                         </ul>
                     </div>
                 </li>
