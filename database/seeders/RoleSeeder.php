@@ -40,11 +40,6 @@ class RoleSeeder extends Seeder
         'student-edit',
         'student-delete',
 
-        'author-list',
-        'author-create',
-        'author-edit',
-        'author-delete',
-
         'course-list',
         'course-create',
         'course-edit',
@@ -103,15 +98,6 @@ class RoleSeeder extends Seeder
             'student-create',
             'student-edit',
             'student-delete'
-        ]);
-
-        $author = Role::firstOrCreate(['name' => 'author']);
-
-        $author->givePermissionTo([
-            'article-list',
-            'article-create',
-            'article-edit',
-            'article-delete'
         ]);
     }
 }
