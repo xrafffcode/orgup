@@ -11,7 +11,9 @@ class RoleSeeder extends Seeder
 {
 
     private $permissions = [
-        'dashboard',
+        'dashboard-view',
+
+        'account-management',
 
         'permission-list',
         'permission-create',
