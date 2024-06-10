@@ -1,6 +1,6 @@
 <nav class="sidebar">
     <div class="sidebar-header">
-        <img src="{{ asset('admin/images/logo-dilesin.png') }}" class="sidebar-brand" width="100">
+        <img src="{{ asset('app/images/orgup.png') }}" class="sidebar-brand" width="60">
         <div class="sidebar-toggler not-active">
             <span></span>
             <span></span>
@@ -39,14 +39,14 @@
                                     </a>
                                 </li>
                             @endcan
-                            @can('role-list')
+                            {{-- @can('role-list')
                                 <li class="nav-item">
                                     <a href="{{ route('admin.role.index') }}"
                                         class="nav-link {{ request()->is('admin/role*') ? ' active' : '' }}">
                                         Role
                                     </a>
                                 </li>
-                            @endcan
+                            @endcan --}}
                         </ul>
                     </div>
                 </li>

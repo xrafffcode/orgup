@@ -17,3 +17,6 @@ Route::group(['prefix' => 'admin'], function () {
         return "Dashboard";
     })->name('dashboard');
 });
+
+require __DIR__ . '/admin.php';
+require __DIR__ . '/auth.php';

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? '' }}</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('admin/images/favicon-dilesin.png') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('app/images/orgup.png') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,8 @@
 
     <style>
         :root {
-            --primary: #F9883D;
-            --primaryHover: #F57119;
+            --primary: #0087F6;
+            --primaryHover: #0072d3;
 
         }
     </style>
