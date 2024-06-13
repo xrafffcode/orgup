@@ -148,3 +148,39 @@ a:hover {
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+/* <div class="card card-statistics">
+<div class="card-body">
+    <div class="information">
+        <h5 class="text-muted">Jumlah Student</h5>
+        <h4 class="mb-0">{{ \App\Models\Student::count() }}</h4>
+    </div>
+    <div class="float-right icon-circle-medium  icon-box-lg  bg-orange-light mt-0">
+        <i class="fa fa-users text-orange icon-circle-medium"></i>
+    </div>
+</div>
+</div> */
+
+.card-statistics {
+    display: flex;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-statistics .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-statistics .card-body .information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-statistics .card-body i{
+    font-size: 30px;
+    color: var(--primary);
+}
