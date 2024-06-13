@@ -11,7 +11,7 @@
             <x-ui.base-card>
                 <x-slot name="header">
                     <x-ui.base-button color="primary" type="button" href="{{ route('admin.article.create') }}">
-                        Tambah Article
+                        Tambah Artikel
                     </x-ui.base-button>
                 </x-slot>
                 <x-ui.datatables>

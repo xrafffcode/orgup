@@ -61,6 +61,7 @@
     </nav>
 
     <div class="container-fluid mt-2">
+        @include('sweetalert::alert')
         {{ $slot }}
     </div>
 

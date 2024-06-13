@@ -22,7 +22,7 @@
         <div class="container pb---70">
             <div class="row">
                 @foreach ($articles as $article)
-                    <div class="col-4">
+                    <div class="col-12 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-blog">
                             <div class="inner-blog">
                                 <div class="blog-img">

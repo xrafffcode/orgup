@@ -105,3 +105,149 @@
     background-color: #0087F6;
     color: #fff !important;
 }
+
+.lesson-card .card-title{
+    color: #000;
+}
+
+.lesson-card.active .card-title{
+    color: #fff !important;
+}
+
+.react-course-title{
+    font-size: 18px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    transition: all 0.3s ease;
+}
+
+.react-course-title:hover{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.react-course-filter .single-studies .inner-course .case-content .case-title{
+    font-size: 18px !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    transition: all 0.3s ease;
+}
+
+.react-course-filter .single-studies .inner-course .case-content .case-title:hover{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.blog-title{
+    font-size: 18px !important;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    transition: all 0.3s ease;
+}
+
+
+.blog-title:hover{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.react-course-filter .single-studies .inner-course .case-content ul
+{
+    flex-direction: column;
+}
+
+.react-course-filter .single-studies .inner-course .case-content .react-ratings{
+    flex-direction:row;
+}
+
+.card-sidebar{
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-sidebar .user .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card-sidebar .user .info h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-sidebar  .menus .item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #999aa4 !important;
+}
+
+.card-sidebar  .menus .item a{
+    color: #999aa4 !important;
+}
+
+.card-sidebar  .menus .item.active {
+    color: #0087F6 !important;
+}
+
+.card-sidebar  .menus .item.active a{
+    color: #0087F6 !important;
+}
+
+.card-sidebar .menus .item img {
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.card-sidebar .menus .item p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}

@@ -22,7 +22,7 @@
         <div class="container pb---70">
             <div class="row">
                 @foreach ($courses as $course)
-                    <div class="single-studies col-lg-4 grid-item">
+                    <div class="single-studies col-12 col-lg-4 col-md-6 col-sm-12">
                         <div class="inner-course">
                             <div class="case-img">
                                 <img src="{{ asset($course->thumbnail) }}" alt="Course Image">

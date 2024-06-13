@@ -15,7 +15,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 mt-5 mt-lg-0">
                     <div class="hero-img">
                         <img src="{{ asset('app/images/hero-img.png') }}" alt="hero" class="img-fluid">
                     </div>
@@ -44,8 +44,8 @@
                                     <li>{{ $course->instructor->name }}</li>
                                     <li>{{ $course->lessons->count() }} Pelajaran</li>
                                 </ul>
-                                <h3 class="react-course-title"><a
-                                        href="{{ route('app.course.show', $course->slug) }}">{{ $course->title }}</a>
+                                <h3 class="react-course-title">
+                                    <a href="{{ route('app.course.show', $course->slug) }}">{{ $course->title }}</a>
                                 </h3>
                                 <div class="course__card-icon d-flex align-items-center">
                                     <div class="react__user">
@@ -67,6 +67,42 @@
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="react-blog__area blog__area pt---120 pb---120 graybg-home">
+        <div class="container blog__width">
+            <div class="react__title__section text-center">
+                <h2 class="react__tittle">
+                    Artikel Terbaru
+                </h2>
+                <img src="{{ asset('app/images/line.png') }}" alt="image">
+            </div>
+            <div class="row">
+
+
+                @foreach ($articles as $article)
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                        <div class="blog__card mb-50">
+                            <div class="blog__thumb w-img p-relative">
+                                <a class="blog__thumb--image" href="{{ route('app.article.show', $article->slug) }}">
+                                    <img src="{{ asset($article->thumbnail) }}" alt="This the first card image">
+                                </a>
+                            </div>
+                            <div class="blog__card--content">
+                                <div class="blog__card--content-area mb-25">
+                                    <span class="blog__card--date">{{ $article->created_at }}</span>
+                                    <h3 class="blog__card--title">
+                                        <a href="{{ route('app.article.show', $article->slug) }}">
+                                            {{ $article->title }}
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

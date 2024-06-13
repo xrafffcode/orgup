@@ -38,10 +38,18 @@
 
     <link rel="stylesheet" href="{{ asset('app/css/custom.css') }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
+        body {
+            background-color: #f6f8fd !important;
+        }
+
         .swal2-container {
-            z-index: 100;
-            margin-top: 80px
+            z-index: 99999;
+            margin-top: 100px
         }
 
         .navbar .navbar-nav a:hover {
@@ -65,45 +73,61 @@
 
 <body>
     <x-ui.app-header />
-    <div class="container">
+
+    <div class="container py-5">
         <div class="row">
             @include('sweetalert::alert')
 
-            <div class="col-sm-12 col-lg-3 col-md-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-header">
-                        Profil Kamu
-                    </div>
+            <div class="col-sm-12 col-lg-3 col-md-3">
+                <div class="card border-0 shadow-sm card-sidebar">
                     <div class="card-body">
-                        <ul class="nav nav-side flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link {{ request()->is('student/dashboard') ? 'active' : '' }}"
-                                    href="{{ route('student.dashboard') }}">Dashboard</a>
-                            </li>
+                        <div class="user ">
+                            <img src="{{ asset(Auth::user()->profile()->avatar) }}" class="avatar " alt="avatar">
+                            <div class="info">
+                                <h3 class="lh-base">
+                                    {{ Auth::user()->profile()->name }}
+                                </h3>
+                            </div>
+                        </div>
 
-                            <li class="nav-item">
-                                <a class="nav-link {{ request()->is('student/kelas') ? 'active' : '' }}"
-                                    href="{{ route('student.course') }}">
-                                    Kelas
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="menus">
+                            <div class="item {{ request()->is('student/dashboard') ? 'active' : '' }}">
+                                <i class="fa fa-home"></i>
+                                <p>
+                                    <a href="{{ route('student.dashboard') }}">
+                                        Dashboard
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="item {{ request()->is('student/kelas') ? 'active' : '' }}">
+                                <i class="fa fa-book"></i>
+                                <p>
+                                    <a href="{{ route('student.course') }}">
+                                        Kelas
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="item {{ request()->is('student/setting') ? 'active' : '' }}">
+                                <i class="fa fa-cog"></i>
+                                <p>
+                                    <a href="{{ route('student.setting') }}">
+                                        Pengaturan Profil
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-lg-9 col-md-8 mt-5 mt-lg-0">
-                <div class="card border-0 shadow-sm  mt-lg-0 mt-md-0">
-                    <div class="card-header">
-                        {{ $title }}
-                    </div>
-                    <div class="card-body">
-                        {{ $slot }}
-                    </div>
-                </div>
-
+                {{ $slot }}
             </div>
         </div>
     </div>
+
+    <x-ui.app-footer />
 
 
     @stack('addonScript')

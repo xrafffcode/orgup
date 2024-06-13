@@ -36,11 +36,9 @@ class CourseController extends Controller
                 'date' => now(),
             ]);
 
-            $this->commitTransaction();
+            Swal::success('Selamat kamu telah berhasil mendaftar ' . $course->name, 'Terima kasih');
 
-            Swal::success('Success', 'Kamu berhasil mendaftar kelas ini');
-
-            return redirect()->back();
+            return redirect()->route('app.course.play', $course->slug);
         } catch (\Throwable $th) {
             $this->rollback();
 

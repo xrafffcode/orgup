@@ -49,11 +49,6 @@
                                 <a class="nav-link" id="curriculums" data-bs-toggle="tab" href="#curriculum"
                                     role="tab" aria-controls="curriculum" aria-selected="false">Pembelajaran</a>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="reviewss" data-bs-toggle="tab" href="#reviews" role="tab"
-                                    aria-controls="reviews" aria-selected="false">Reviews</a>
-                            </li>
-
                         </ul>
                         <div class="tab-content" id="back-tab-content">
                             <div class="tab-pane fade show active" id="discription" role="tabpanel"
@@ -73,36 +68,6 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews">
-                                <h3>Reviews</h3>
-                                <a href="#" class="post-author">
-                                    <div class="avatar">
-                                        <img src="https://ui-avatars.com/api/?name=Natasha+Pawel&color=7F9CF5&background=EBF4FF"
-                                            alt="user">
-                                    </div>
-                                    <div class="info">
-                                        <div class="back-ratings">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                        </div>
-                                        <h4 class="name">
-                                            Natasha Pawel
-                                            <span class="designation">
-                                                20 Januari 2023
-                                            </span>
-                                        </h4>
-                                        <p>
-                                            Kursus ini sangat membantu bagi para pemula yang ingin memulai belajar
-                                            berorgranisasi,
-                                            karena materi yang dipelajari sangat lengkap.
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-
                         </div>
                     </div>
 

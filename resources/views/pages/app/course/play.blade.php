@@ -18,12 +18,16 @@
                 </div>
             </div>
 
+
+
             <div class="col-12 col-lg-9 col-md-9 col-sm-12 mt-5 mt-lg-0">
-                <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/{{ $course->lessons[0]->video }}" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen id="video"></iframe>
+                <div class="video-container mb-45" id="player">
+                    <iframe src="https://www.youtube.com/embed/{{ $course->lessons[0]->video }}" allowfullscreen=""
+                        allowtransparency="" allow="autoplay" frameborder="0" id="video"
+                        data-gtm-yt-inspected-5="true" title="YouTube video player"></iframe>
+                </div>
             </div>
+
         </div>
 
         @push('script')

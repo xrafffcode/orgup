@@ -33,6 +33,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/responsive.css') }}">
 
     <link rel="stylesheet" href="{{ asset('app/css/custom.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -41,10 +45,14 @@
     <!--================= Wrapper Start Here =================-->
     <div class="react-wrapper">
         <div class="react-wrapper-inner">
+            @include('sweetalert::alert')
+
             {{ $slot }}
         </div>
     </div>
     <!--================= Wrapper End Here =================-->
+
+    <x-ui.app-footer />
 
     <!--================= Jquery latest version =================-->
     <script src="{{ asset('app/js/jquery.min.js') }}"></script>

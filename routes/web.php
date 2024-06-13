@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\ArticleController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\InstructorController;
 use App\Http\Controllers\Student\DashboardController;
+use App\Http\Controllers\Student\SettingController;
 use App\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,9 @@ Route::prefix('student')->name('student.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/kelas', [DashboardController::class, 'course'])->name('course');
+
+    Route::get('/setting-profile', [SettingController::class, 'index'])->name('setting');
+    Route::put('/setting-profile', [SettingController::class, 'update'])->name('setting.update');
 });
 
 require __DIR__ . '/admin.php';

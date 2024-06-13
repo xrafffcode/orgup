@@ -7,7 +7,7 @@
                     <!--================= Menu Toggle btn =================-->
                     <div class="menu-toggle">
                         <div class="logo">
-                            <a href="index.html" class="logo-text">
+                            <a href="{{ route('app.landing') }}" class="logo-text">
                                 <img src="{{ asset('app/images/orgup.png') }}" alt="logo" width="80">
                             </a>
                         </div>
