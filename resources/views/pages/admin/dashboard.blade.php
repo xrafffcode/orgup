@@ -5,7 +5,7 @@
 
     @role('admin')
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-lg-0">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-3 mt-xl-0">
                 <div class="card card-statistics">
                     <div class="card-body">
                         <div class="information">
@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-lg-0">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-3 mt-xl-0">
                 <div class="card card-statistics">
                     <div class="card-body">
                         <div class="information">
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-lg-0">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-3 mt-xl-0">
                 <div class="card card-statistics">
                     <div class="card-body">
                         <div class="information">
@@ -42,7 +42,7 @@
             </div>
 
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-lg-0">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-3 mt-xl-0">
                 <div class="card card-statistics">
                     <div class="card-body">
                         <div class="information">
@@ -58,7 +58,7 @@
 
     @role('instructor')
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-3 mt-lg-0">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mt-3 mt-xl-0">
                 <div class="card card-statistics">
                     <div class="card-body">
                         <div class="information">

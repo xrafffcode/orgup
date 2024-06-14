@@ -149,17 +149,6 @@ a:hover {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* <div class="card card-statistics">
-<div class="card-body">
-    <div class="information">
-        <h5 class="text-muted">Jumlah Student</h5>
-        <h4 class="mb-0">{{ \App\Models\Student::count() }}</h4>
-    </div>
-    <div class="float-right icon-circle-medium  icon-box-lg  bg-orange-light mt-0">
-        <i class="fa fa-users text-orange icon-circle-medium"></i>
-    </div>
-</div>
-</div> */
 
 .card-statistics {
     display: flex;
@@ -184,3 +173,4 @@ a:hover {
     font-size: 30px;
     color: var(--primary);
 }
+

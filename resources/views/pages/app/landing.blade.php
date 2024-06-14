@@ -40,10 +40,7 @@
                                     <img src="{{ asset($course->thumbnail) }}" alt="image"></a>
                             </div>
                             <div class="course__inner">
-                                <ul>
-                                    <li>{{ $course->instructor->name }}</li>
-                                    <li>{{ $course->lessons->count() }} Pelajaran</li>
-                                </ul>
+
                                 <h3 class="react-course-title">
                                     <a href="{{ route('app.course.show', $course->slug) }}">{{ $course->title }}</a>
                                 </h3>
