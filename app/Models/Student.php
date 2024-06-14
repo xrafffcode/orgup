@@ -39,6 +39,16 @@ class Student extends Model
         return $this->hasMany(Enrollment::class);
     }
 
+    public function theards()
+    {
+        return $this->hasMany(Theard::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function isEnrolled($id)
     {
         return $this->enrollments()->where('course_id', $id)->exists();

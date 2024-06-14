@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ArticleController;
 use App\Http\Controllers\Frontend\CourseController;
+use App\Http\Controllers\Frontend\ForumController;
 use App\Http\Controllers\Frontend\InstructorController;
 use App\Http\Controllers\Student\DashboardController;
 use App\Http\Controllers\Student\SettingController;
@@ -16,9 +17,9 @@ Route::group(['as' => 'app.'], function () {
         Route::get('/', [CourseController::class, 'index'])->name('index');
         Route::get('/{slug}', [CourseController::class, 'show'])->name('show');
 
-        Route::post('/{slug}/enroll', [CourseController::class, 'enroll'])->name('enroll');
+        Route::post('/{slug}/enroll', [CourseController::class, 'enroll'])->name('enroll')->middleware('auth');
 
-        Route::get('/play/{slug}', [CourseController::class, 'play'])->name('play');
+        Route::get('/play/{slug}', [CourseController::class, 'play'])->name('play')->middleware('auth');
     });
 
     Route::prefix('instruktur')->name('instructor.')->group(function () {
@@ -30,10 +31,23 @@ Route::group(['as' => 'app.'], function () {
         Route::get('/{slug}', [ArticleController::class, 'show'])->name('show');
     });
 
+    Route::prefix('forum')->name('forum.')->group(function () {
+        Route::get('/', [ForumController::class, 'index'])->name('index');
+
+        Route::get('/topik/{id}', [ForumController::class, 'show'])->name('show');
+
+        Route::post('/{id}/comment', [ForumController::class, 'comment'])->name('comment')->middleware('auth');
+
+        Route::post('/{slug}/reply', [ForumController::class, 'reply'])->name('reply')->middleware('auth');
+
+        Route::get('/tambah-topik', [ForumController::class, 'create'])->name('create')->middleware('auth');
+        Route::post('/tambah-topik', [ForumController::class, 'store'])->name('store')->middleware('auth');
+    });
+
     Route::get('/tentang-kami', [AboutController::class, 'index'])->name('about');
 });
 
-Route::prefix('student')->name('student.')->group(function () {
+Route::prefix('student')->name('student.')->middleware(['auth', 'role:student'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/kelas', [DashboardController::class, 'course'])->name('course');

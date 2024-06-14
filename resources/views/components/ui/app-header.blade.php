@@ -27,6 +27,9 @@
                                 <a href="{{ route('app.course.index') }}">Kelas</a>
                             </li>
                             <li>
+                                <a href="{{ route('app.forum.index') }}">Forum</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('app.instructor.index') }}">Instruktur</a>
                             </li>
                             <li>

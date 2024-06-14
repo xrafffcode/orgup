@@ -274,3 +274,12 @@
 .react-footer.home-main .footer-top .footer-menu li a:hover, .react-footer.home-main .footer-top .footer-widget .footer-address li a:hover, .react-footer.home-main .copyright .react-copy-left a{
     color: #0087F6 !important;
 }
+
+.comment {
+    margin-left: 20px;
+}
+.comment-reply {
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+    margin-left: 40px;
+}
