@@ -103,18 +103,6 @@
                         e.target.parentElement.parentElement.remove();
                     }
                 });
-
-                document.querySelector('#form').addEventListener('submit', function() {
-                    const videoInput = document.querySelector('#lesson-video');
-
-                    videoInput.value = videoInput.value.split('youtu.be/')[1];
-
-                    const videoId = videoInput.value;
-
-                    videoInput.value = `https://www.youtube.com/embed/${videoId}`;
-
-                    document.querySelector('#form').submit();
-                })
             });
         </script>
     @endpush
